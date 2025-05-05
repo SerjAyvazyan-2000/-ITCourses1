@@ -1,0 +1,165 @@
+
+.site-header {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10000;
+    padding: 15px 0;
+}
+
+.site-header .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-width: 60px;
+    height: 60px;
+    width: 100%;
+
+}
+.logo-box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo-box span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00BFFF;
+}
+
+.header-contact-info {
+    display: flex;
+    gap: 20px;
+    font-size: 0.95rem;
+}
+
+.header-contact-info a {
+    text-decoration: none;
+    color: #333;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 10px 0 0 0;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #007ACC;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #00BFFF;
+}
+
+.burger {
+    width: 30px;
+    height: 22px;
+    position: relative;
+    display: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.burger span {
+    background: #00BFFF;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transition: 0.3s ease;
+    border-radius: 2px;
+}
+
+.burger span:nth-child(1) {
+    top: 0;
+}
+
+.burger span:nth-child(2) {
+    top: 9px;
+}
+
+.burger span:nth-child(3) {
+    bottom: 0;
+}
+
+/* When open: turn into X */
+.burger.open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 9px;
+}
+
+.burger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    bottom: 9px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .main-nav {
+        opacity: 0;
+        visibility: hidden;
+        flex-direction: column;
+        transition: 0.3s ease;
+        max-height: 0;
+
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .main-nav.open {
+        opacity: 1;
+        visibility: visible;
+        max-height: 1000px;
+        margin-top: 10px;
+
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .header-contact-info {
+        flex-direction: column;
+        align-items: flex-end;
+        font-size: 0.85rem;
+        gap: 10px;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .header-contact-info {
+        display: none;
+    }
+    .logo {
+        max-width: 40px;
+        height: 40px;
+
+    }
+}
