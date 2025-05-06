@@ -139,6 +139,26 @@ if(mySwiper){
     });
 
 }
+const heroSwiper = document.querySelector('.heroSwiper')
+
+if(heroSwiper){
+    const heroSwiper = new Swiper('.heroSwiper', {
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
+
+
+}
+
+
 
 
 
@@ -242,3 +262,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
