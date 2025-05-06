@@ -18,11 +18,8 @@
     justify-content: center;
     overflow: hidden;
 }
-.hero-overlay {
-    position: absolute;
-    inset: 0;
+.heroSwiper{
     background: rgba(0, 0, 0, 0.65);
-    z-index: 1;
 }
 
 .hero-content {
@@ -122,10 +119,11 @@
 
     .hero-swiper {
         height: 100%;
-        padding: 70px 0 0;
+        padding: 0 ;
     }
     .hero-slide{
-        padding: 0 15px;
+        padding: 100px 15px;
+        height: 100%;
     }
 }
 
@@ -210,7 +208,14 @@
     .service-item h3 {
         font-size: 1.25rem;
     }
-
+    .feature {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 12px;
+        flex: unset;
+        transition: transform 0.3s ease;
+        backdrop-filter: blur(4px);
+    }
     .service-item p {
         font-size: 0.95rem;
     }
